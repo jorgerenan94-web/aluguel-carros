@@ -1,8 +1,8 @@
 import CustomInput from "../CustomInput";
 import { LuCalendar } from "react-icons/lu";
-import CustomInputList from "../CustomInputList";
 import { CiViewList } from "react-icons/ci";
-
+import  CustomSelect from "../CustomSelect";
+ 
 export default function CustomForm (){
     return (
         <form className="space-y-6">
@@ -12,10 +12,25 @@ export default function CustomForm (){
                 type = "number"
                 placeholder = "Ex: 5"
             />
-            <CustomInputList
+            <CustomSelect
                 label = "Categoria do veículo"
                 icon = {<CiViewList className="text-lg text-blue-500"/>}
-                
+                options = {
+                    [
+                        {
+                            text: "SUV",
+                            value: 123
+                        },
+                        {
+                            text: "Sedan",
+                            value: 123
+                        },
+                        {
+                            text: "Pickup",
+                            value: 123
+                        }
+                    ]
+                }
             />
         </form>
     )

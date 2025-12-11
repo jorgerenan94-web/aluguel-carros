@@ -1,4 +1,4 @@
-export default function CustomInputList ({label,icon,options}){
+export default function CustomSelect ({label, icon, options}){
     
     return (
         <div className="space-y-2">
@@ -8,7 +8,13 @@ export default function CustomInputList ({label,icon,options}){
             </label>
 
             <select id="category" className="flex w-full rounded-md border border-[#87CEEB] bg-[#f8fafc] px-3 py-2 text-base outline-none focus:border focus:border-[#4682b4]">
-                
+                {options.map((opc) => {
+                    return (
+                        <option value={opc.value}>
+                            {opc.text}
+                        </option>
+                    )
+                })}
             </select>
         </div>
     )
