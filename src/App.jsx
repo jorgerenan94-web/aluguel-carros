@@ -16,8 +16,8 @@ export default function App(){
         </div>
       </section>
 
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className=" container py-20 px-4">
+        <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-semibold text-[#0F1729]/80">Simule seu Aluguel</h2>
             <p className="text-xl text-[#a9a9a9]">Calcule o valor do seu aluguel em segundos!</p>

@@ -13,7 +13,7 @@ export default function CustomInput ({label, icon, type, placeholder}){
                 type={type} 
                 placeholder={placeholder} 
                 id="days" 
-                className="flex w-full rounded-md border border-[#87CEEB] bg-[#f8fafc] px-3 py-2 text-base outline-none focus:border focus:border-[#4682b4]"
+                className="flex w-full rounded-xl border border-[#87CEEB] bg-[#f8fafc] px-3 py-2 text-base outline-none focus:border focus:border-[#4682b4]"
             />        
         </div>
     )
