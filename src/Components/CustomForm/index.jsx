@@ -1,5 +1,5 @@
 import CustomInput from "../CustomInput";
-import { LuCalendar } from "react-icons/lu";
+import { LuCalculator, LuCalendar } from "react-icons/lu";
 import { CiViewList } from "react-icons/ci";
 import  CustomSelect from "../CustomSelect";
 import CustomCheckbox from "../CustomCheckbox";
@@ -53,7 +53,10 @@ export default function CustomForm (){
                 <CustomCheckbox info="Assistência 24Hrs" value="R$ 25/dia"/>
                 <CustomCheckbox info="Seguro completo" value="R$ 50/dia"/>
             </div>
-            <CustomButton />
+            <CustomButton>
+                <LuCalculator />
+                Calcular valor
+            </CustomButton>
         </form>
     )
 }

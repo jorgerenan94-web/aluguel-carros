@@ -1,5 +1,6 @@
 import { LuCar } from "react-icons/lu";
 import CustomForm from "./Components/CustomForm";
+import Calculator from "./Components/Calculator";
 
 export default function App(){
   return (
@@ -26,6 +27,9 @@ export default function App(){
           <div className="grid grid-cols-2 gap-8">
             <div className="border rounded-lg bg-white text-[#1a1f2c] border-[#4682b4] shadow-sm p-8">
               <CustomForm />
+            </div>
+            <div className="border rounded-lg bg-white text-[#1a1f2c] border-[#4682b4] shadow-sm p-8 flex justify-center items-center">
+              <Calculator />
             </div>
           </div>
         </div>
