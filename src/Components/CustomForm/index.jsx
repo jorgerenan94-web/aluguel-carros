@@ -5,7 +5,7 @@ import  CustomSelect from "../CustomSelect";
 import CustomCheckbox from "../CustomCheckbox";
 import CustomButton from "../CustomButton";
  
-export default function CustomForm (){
+export default function CustomForm (dias,setDias,categ,setCateg,opcoes,setOpcoes){
     return (
         <form className="space-y-6">
             <CustomInput 
@@ -13,6 +13,8 @@ export default function CustomForm (){
                 icon = {<LuCalendar className="text-blue-500"/>}
                 type = "number"
                 placeholder = "Ex: 5"
+                //value={dias}
+                //onChange={(event) => setDias(event.target.value)}
             />
             <CustomSelect
                 label = "Categoria do veículo"

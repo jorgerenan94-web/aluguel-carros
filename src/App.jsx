@@ -1,8 +1,14 @@
 import { LuCar } from "react-icons/lu";
 import CustomForm from "./Components/CustomForm";
 import Calculator from "./Components/Calculator";
+import { useState } from "react"
+import CustomCard from "./Components/CustomCard";
 
 export default function App(){
+  const [dias, setDias] = useState("")
+  const [categ, setCateg] = useState("")
+  const [opcoes, setOpcoes] = useState([])
+
   return (
     <div className="w-full min-h-screen bg-[#F0F3F5] flex justify-center flex-col items-center">
       <section>
@@ -17,7 +23,7 @@ export default function App(){
         </div>
       </section>
 
-      <section className=" container py-20 px-4">
+      <section className="container py-20 px-4">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-semibold text-[#0F1729]/80">Simule seu Aluguel</h2>
@@ -26,11 +32,57 @@ export default function App(){
 
           <div className="grid grid-cols-2 gap-8">
             <div className="border rounded-lg bg-white text-[#1a1f2c] border-[#4682b4] shadow-sm p-8">
-              <CustomForm />
+              <CustomForm
+                setDias={setDias}
+                setCateg={setCateg}
+                setOpcoes={setOpcoes}
+                dias={dias}
+                categ={categ}
+                opcoes={opcoes}
+              />
             </div>
-            <div className="border rounded-lg bg-white text-[#1a1f2c] border-[#4682b4] shadow-sm p-8 flex justify-center items-center">
-              <Calculator />
+            <div className=" border rounded-lg bg-white text-[#1a1f2c] border-[#4682b4] shadow-sm p-8 flex justify-center items-center">
+              <Calculator
+                dias={dias}
+                categ={categ}
+                opcoes={opcoes}
+              />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container py-20 px-4">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-semibold text-[#0F1729]/80">Nossa Frota</h2>
+            <p className="text-xl text-[#a9a9a9]">Veículos modernos e bem conservados para sua segurança</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <CustomCard 
+                image="/src/images/Captura de tela 2025-12-26 110426.png"
+                cat="Econômico"
+                model="Fiat Mobi"
+                cambio="Manual"
+                pot="1.0"
+              />
+
+              <CustomCard 
+                image="/src/images/Captura de tela 2025-12-26 110426.png"
+                cat="Compacto"
+                model="Pálio"
+                cambio="Manual"
+                pot="1.4"
+              />
+
+              <CustomCard 
+                image="/src/images/Captura de tela 2025-12-26 110426.png"
+                model="Corolla Cross"
+                cat="SUV"
+                cambio="Automático"
+                pot="2.0"
+              />
           </div>
         </div>
       </section>

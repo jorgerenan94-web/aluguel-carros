@@ -1,6 +1,6 @@
 
 
-export default function CustomInput ({label, icon, type, placeholder}){
+export default function CustomInput ({label, icon, type, placeholder,value,onChange}){
     return (
         <div className="space-y-2">
             
@@ -10,6 +10,8 @@ export default function CustomInput ({label, icon, type, placeholder}){
             </label>
             
             <input 
+                //value={value}
+                //onChange={onChange}
                 type={type} 
                 placeholder={placeholder} 
                 id="days" 
