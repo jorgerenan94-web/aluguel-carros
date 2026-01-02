@@ -3,6 +3,7 @@ import CustomForm from "./Components/CustomForm";
 import Calculator from "./Components/Calculator";
 import { useState } from "react"
 import CustomCard from "./Components/CustomCard";
+import CustomExtras from "./Components/CustomExtras";
 
 export default function App(){
   const [dias, setDias] = useState("")
@@ -61,7 +62,7 @@ export default function App(){
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <CustomCard 
-                image="/src/images/Captura de tela 2025-12-26 110426.png"
+                image="/src/images/Mobi.png"
                 cat="Econômico"
                 model="Fiat Mobi"
                 cambio="Manual"
@@ -69,7 +70,7 @@ export default function App(){
               />
 
               <CustomCard 
-                image="/src/images/Captura de tela 2025-12-26 110426.png"
+                image="/src/images/Novo_palio.png"
                 cat="Compacto"
                 model="Pálio"
                 cambio="Manual"
@@ -77,12 +78,56 @@ export default function App(){
               />
 
               <CustomCard 
-                image="/src/images/Captura de tela 2025-12-26 110426.png"
+                image="/src/images/Corolla.png"
+                model="Corolla"
+                cat="Sedan"
+                cambio="Automático"
+                pot="2.0"
+              />
+
+              <CustomCard 
+                image="/src/images/Corolla_cross.png"
                 model="Corolla Cross"
                 cat="SUV"
                 cambio="Automático"
                 pot="2.0"
               />
+
+              <CustomCard 
+                image="/src/images/BMW.png"
+                model="BMW Série 3"
+                cat="Premium"
+                cambio="Automático"
+                pot="2.0"
+              />
+
+              <CustomCard 
+                image="/src/images/BYD.png"
+                model="BYD Sonic"
+                cat="Híbrido"
+                cambio="Automático"
+                pot="2.0"
+              />
+          </div>
+        </div>
+      </section>
+
+      <section className="container py-20 px-4">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-semibold text-[#0F1729]/80">
+              Por que escolher a JR Veículos?
+            </h2>
+            <p className="text-xl text-[#a9a9a9]">
+              Experiência completa em aluguel de veículos
+            </p>
+          </div>
+
+          <div className="grid grid-cols-4 gap-6">
+            <CustomExtras />
+            <CustomExtras />
+            <CustomExtras />
+            <CustomExtras />
           </div>
         </div>
       </section>
