@@ -1,9 +1,11 @@
-import { LuCar } from "react-icons/lu";
+import { LuCar, LuHeadphones } from "react-icons/lu";
 import CustomForm from "./Components/CustomForm";
 import Calculator from "./Components/Calculator";
 import { useState } from "react"
 import CustomCard from "./Components/CustomCard";
 import CustomExtras from "./Components/CustomExtras";
+import { GoClock, GoShieldCheck } from "react-icons/go";
+import { CiCreditCard1 } from "react-icons/ci";
 
 export default function App(){
   const [dias, setDias] = useState("")
@@ -112,7 +114,7 @@ export default function App(){
         </div>
       </section>
 
-      <section className="container py-20 px-4">
+      <section className="container py-20 px-2">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-semibold text-[#0F1729]/80">
@@ -124,10 +126,26 @@ export default function App(){
           </div>
 
           <div className="grid grid-cols-4 gap-6">
-            <CustomExtras />
-            <CustomExtras />
-            <CustomExtras />
-            <CustomExtras />
+            <CustomExtras 
+              icon={<GoShieldCheck />}
+              titulo="Seguro Completo"
+              frase="Proteção total durante toda a viagem"
+            />
+            <CustomExtras 
+              icon={<GoClock />}
+              titulo="Disponível 24/7"
+              frase="Retire e devolva seu carro a qualquer hora, todos os dias"
+            />
+            <CustomExtras 
+              icon={<CiCreditCard1 />}
+              titulo="Pagamento Flexível"
+              frase="Parcele em até 12x ou pague com PIX e ganhe desconto"
+            />
+            <CustomExtras 
+              icon={<LuHeadphones />}
+              titulo="Suporte Dedicado"
+              frase="Equipe pronta para te atender quando você precisar"
+            />
           </div>
         </div>
       </section>

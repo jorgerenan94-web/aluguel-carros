@@ -44,6 +44,10 @@ export default function CustomForm (dias,setDias,categ,setCateg,opcoes,setOpcoes
                         {
                             text: "Premium - R$ 349/dia",
                             value: 5
+                        },
+                        {
+                            text: "Híbrido - R$ 450/dia",
+                            value: 6
                         }
                     ]
                 }
