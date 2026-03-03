@@ -5,7 +5,7 @@ import  CustomSelect from "../CustomSelect";
 import CustomCheckbox from "../CustomCheckbox";
 import CustomButton from "../CustomButton";
  
-export default function CustomForm (dias,setDias,categ,setCateg,opcoes,setOpcoes){
+export default function CustomForm ({ativar, dias,setDias,categ,setCateg,opcoes,setOpcoes}){
     return (
         <form className="space-y-6">
             <CustomInput 
@@ -59,7 +59,9 @@ export default function CustomForm (dias,setDias,categ,setCateg,opcoes,setOpcoes
                 <CustomCheckbox info="Assistência 24Hrs" value="R$ 25/dia"/>
                 <CustomCheckbox info="Seguro completo" value="R$ 50/dia"/>
             </div>
-            <CustomButton>
+            <CustomButton
+                onClick={ativar}
+            >
                 <LuCalculator />
                 Calcular valor
             </CustomButton>

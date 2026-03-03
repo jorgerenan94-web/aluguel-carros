@@ -11,6 +11,12 @@ export default function App(){
   const [dias, setDias] = useState("")
   const [categ, setCateg] = useState("")
   const [opcoes, setOpcoes] = useState([])
+  const [resultado, setResultado] = useState(false)
+
+  function ativarResultado(){
+    setResultado(true);
+    console.log(resultado)
+  }
 
   return (
     <div className="w-full min-h-screen bg-[#F0F3F5] flex justify-center flex-col items-center">
@@ -42,6 +48,7 @@ export default function App(){
                 dias={dias}
                 categ={categ}
                 opcoes={opcoes}
+                ativar={ativarResultado}
               />
             </div>
             <div className=" border rounded-lg bg-white text-[#1a1f2c] border-[#4682b4] shadow-sm p-8 flex justify-center items-center">
@@ -49,6 +56,7 @@ export default function App(){
                 dias={dias}
                 categ={categ}
                 opcoes={opcoes}
+                ativado={resultado}
               />
             </div>
           </div>

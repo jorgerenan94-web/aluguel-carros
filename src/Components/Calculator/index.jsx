@@ -1,9 +1,9 @@
 import { LuCalculator } from "react-icons/lu";
 
-export default function Calculator({dias, categ, opcoes}) {
+export default function Calculator({ativado,dias, categ, opcoes}) {
     return (
         <div className="space-y-6 w-full">
-            <div className="w-full mx-auto h-auto flex justify-center items-center flex-col hidden">
+            <div className={`w-full mx-auto h-auto flex justify-center items-center flex-col ${ativado? "" : "hidden"}`}>
                     <div className="flex justify-center items-center flex-col pb-8">
                      <p className="text-[17px]">Valor Total</p>
                      <span className="text-[#377CF4] font-bold text-6xl">R$ 816,00</span>
@@ -38,7 +38,7 @@ export default function Calculator({dias, categ, opcoes}) {
                     </button>
             </div>
 
-            <div className="w-full h-auto mx-auto flex flex-col items-center">
+            <div className={`w-full h-auto mx-auto flex flex-col items-center ${ativado? "hidden" : ""} `}>
                 <div className="w-25 h-25 bg-[#a9a9a9]/30 rounded-full flex justify-center items-center">
                     <LuCalculator className="text-5xl"/>
                 </div>
