@@ -9,9 +9,11 @@ export default function CustomInput ({label, icon, type, placeholder,value,onCha
                 {label}             
             </label>
             
-            <input 
-                //value={value}
-                //onChange={onChange}
+            <input
+                min="0" 
+                max="366"
+                value={value}
+                onChange={onChange}
                 type={type} 
                 placeholder={placeholder} 
                 id="days" 

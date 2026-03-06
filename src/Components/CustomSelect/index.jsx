@@ -1,4 +1,4 @@
-export default function CustomSelect ({label, icon, options}){
+export default function CustomSelect ({label, icon, options, value, onChange}){
     
     return (
         <div className="space-y-2">
@@ -7,7 +7,7 @@ export default function CustomSelect ({label, icon, options}){
                 {label}             
             </label>
 
-            <select id="category" className="flex w-full rounded-xl border border-[#87CEEB] bg-[#f8fafc] px-3 py-2 text-base outline-none focus:border focus:border-[#4682b4] cursor-pointer">
+            <select id="category" value={value} onChange={onChange} className="flex w-full rounded-xl border border-[#87CEEB] bg-[#f8fafc] px-3 py-2 text-base outline-none focus:border focus:border-[#4682b4] cursor-pointer">
                 {options.map((opc) => {
                     return (
                         <option value={opc.value}>
