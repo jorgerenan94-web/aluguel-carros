@@ -5,7 +5,7 @@ import  CustomSelect from "../CustomSelect";
 import CustomCheckbox from "../CustomCheckbox";
 import CustomButton from "../CustomButton";
  
-export default function CustomForm ({ativar, dias,setDias,categ,setCateg,op1,op2,setOp1,setOp2}){
+export default function CustomForm ({ativar,dias,setDias,categ,setCateg,op,setOp}){
     return (
         <form className="space-y-6">
             <CustomInput 
@@ -25,7 +25,7 @@ export default function CustomForm ({ativar, dias,setDias,categ,setCateg,op1,op2
                     [
                         {
                             text: "Selecione a categoria",
-                            value: 0
+                            value: "0"
                         },
                         {
                             text: "Econômico - R$ 89/dia",
@@ -56,8 +56,8 @@ export default function CustomForm ({ativar, dias,setDias,categ,setCateg,op1,op2
             />
             <div className="space-y-2">
                 <p className="font-semibold text-[#121721]">Opcionais</p>
-                <CustomCheckbox info="GPS" text="R$ 10/dia" value={op1} onChange={(event) => setOp1(event.target.checked)}/>
-                <CustomCheckbox info="Cadeirinha infantil" text="R$ 20/dia" value={op2} onChange={(event) => setOp2(event.target.checked)}/>
+                <CustomCheckbox info="GPS" text="R$ 10/dia" value={op} onChange={(event) => setOp(event.target.checked)}/>
+                <CustomCheckbox info="Cadeirinha infantil" text="R$ 20/dia" />
                 <CustomCheckbox info="Assistência 24Hrs" text="R$ 25/dia"/>
                 <CustomCheckbox info="Seguro completo" text="R$ 50/dia"/>
             </div>

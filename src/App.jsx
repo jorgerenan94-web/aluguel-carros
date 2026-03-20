@@ -10,18 +10,19 @@ import { CiCreditCard1 } from "react-icons/ci";
 export default function App(){
   const [dias, setDias] = useState("")
   const [categ, setCateg] = useState("")
-  const [opcoes1, setOpcoes1] = useState("")
-  const [opcoes2, setOpcoes2] = useState(false)
+  const [opcoes={op1}, setOpcoes] = useState("")
   const [resultado, setResultado] = useState(false)
 
   async function ativarResultado(event){
     event.preventDefault();
-    setResultado(true);
-    console.log(resultado)
-    console.log(dias)
-    console.log(categ)
-    console.log("op1 " + opcoes1)
-    console.log(opcoes2)
+
+    if(dias > 0 && categ !== "0"){
+     return setResultado(true);
+    }
+    console.log("Resultado",resultado)
+    console.log("dias",dias)
+    console.log("categ",categ)
+    console.log("opcoes",opcoes)
   }
 
   return (
@@ -50,12 +51,10 @@ export default function App(){
               <CustomForm
                 setDias={setDias}
                 setCateg={setCateg}
-                setOp1={setOpcoes1}
-                setOp2={setOpcoes2}
+                setOp={setOpcoes}
+                op1={opcoes}
                 dias={dias}
-                categ={categ}
-                op1={opcoes1}
-                op2={opcoes2}
+                categ={categ}                
                 ativar={ativarResultado}
               />
             </div>
@@ -63,8 +62,7 @@ export default function App(){
               <Calculator
                 dias={dias}
                 categ={categ}
-                op1={opcoes1}
-                op2={opcoes2}
+                op={opcoes}
                 ativado={resultado}
               />
             </div>

@@ -1,6 +1,6 @@
 import { LuCalculator } from "react-icons/lu";
 
-export default function Calculator({ativado,dias, categ, op1}) {
+export default function Calculator({ativado,dias, categ, op}) {
     function formatCateg(value){
         const format = value;
         switch(format){
@@ -25,7 +25,7 @@ export default function Calculator({ativado,dias, categ, op1}) {
             <div className={`w-full mx-auto h-auto flex justify-center items-center flex-col ${ativado? "" : "hidden"}`}>
                     <div className="flex justify-center items-center flex-col pb-8">
                      <p className="text-[17px]">Valor Total</p>
-                     <span className="text-[#377CF4] font-bold text-6xl">R${valorTotal},00</span>
+                     <span className="text-[#377CF4] font-bold text-6xl">R$ {valorTotal},00</span>
                     </div>
                     
                     <div className="border-t border-[#a9a9a9] space-y-3 pt-6 w-full pb-6">
@@ -44,10 +44,10 @@ export default function Calculator({ativado,dias, categ, op1}) {
                             </span>
                         </div>
 
-                        <div className={`flex justify-between ${op1? "" : "hidden"}`}>
+                        <div className={`flex justify-between`}>
                             <p className="text-[18px]">Opcionais:</p>
                             <span className="flex font-semibold text-[18px]">
-                                {op1}
+                                {op}
                             </span>
                         </div>
                     </div>
